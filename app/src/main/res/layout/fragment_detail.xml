@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:orientation="horizontal"
-        app:constraint_referenced_ids="tv_args_title,tv_args,tv_state_title,tv_state"
+        app:constraint_referenced_ids="tv_args_title,tv_args,tv_state_title,tv_state,tv_detail_title,tv_detail"
         app:flow_horizontalAlign="start"
         app:flow_horizontalGap="8dp"
         app:flow_horizontalStyle="packed"
@@ -59,4 +59,18 @@
         android:layout_height="wrap_content"
         android:textAppearance="?textAppearanceSubtitle1"
         tools:text="state1" />
+
+    <TextView
+        android:id="@+id/tv_detail_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detail:"
+        android:textAppearance="?textAppearanceSubtitle1" />
+
+    <TextView
+        android:id="@+id/tv_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?textAppearanceSubtitle1"
+        tools:text="detail1" />
 </androidx.constraintlayout.widget.ConstraintLayout>
