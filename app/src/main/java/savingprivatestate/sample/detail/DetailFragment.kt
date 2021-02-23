@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
-import androidx.navigation.fragment.navArgs
 import savingprivatestate.sample.databinding.FragmentDetailBinding
 import savingprivatestate.sample.util.toFormattedString
 
@@ -15,14 +14,12 @@ class DetailFragment : Fragment() {
     private var _binding: FragmentDetailBinding? = null
     private val binding: FragmentDetailBinding get() = _binding!!
 
-    private val args by navArgs<DetailFragmentArgs>()
-
     private lateinit var viewModel: DetailViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val viewModelFactory = DetailViewModel.Factory(args.productId)
+        val viewModelFactory = DetailViewModel.Factory(this, arguments)
         viewModel = ViewModelProvider(this, viewModelFactory).get()
     }
 
