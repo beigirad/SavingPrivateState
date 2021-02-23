@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
 import androidx.navigation.fragment.findNavController
+import savingprivatestate.sample.R
 import savingprivatestate.sample.databinding.FragmentDetailBinding
 import savingprivatestate.sample.util.toFormattedString
 
@@ -21,7 +22,8 @@ class DetailFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         val viewModelFactory = DetailViewModel.Factory(this, arguments)
-        viewModel = ViewModelProvider(this, viewModelFactory).get()
+        val viewModelStore = findNavController().getBackStackEntry(R.id.detailFragment)
+        viewModel = ViewModelProvider(viewModelStore, viewModelFactory).get()
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View =
