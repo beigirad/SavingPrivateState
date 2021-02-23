@@ -29,6 +29,12 @@ class DetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.tvArgs.text = arguments.toString()
         binding.tvState.text = savedInstanceState.toFormattedString()
+        binding.btnInc.setOnClickListener { viewModel.incrementCount() }
+        binding.btnDec.setOnClickListener { viewModel.decrementCount() }
+
+        viewModel.cartLiveData.observe(viewLifecycleOwner) {
+            binding.tvCart.text = it.toString()
+        }
 
         viewModel.detailLiveData.observe(viewLifecycleOwner) {
             binding.tvDetail.text = it.toString()
