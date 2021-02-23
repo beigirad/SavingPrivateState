@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
+import androidx.navigation.fragment.findNavController
 import savingprivatestate.sample.databinding.FragmentDetailBinding
 import savingprivatestate.sample.util.toFormattedString
 
@@ -31,6 +32,10 @@ class DetailFragment : Fragment() {
         binding.tvState.text = savedInstanceState.toFormattedString()
         binding.btnInc.setOnClickListener { viewModel.incrementCount() }
         binding.btnDec.setOnClickListener { viewModel.decrementCount() }
+        binding.btnAttributes.setOnClickListener {
+            val direction = DetailFragmentDirections.actionDetailFragmentToAttributesFragment()
+            findNavController().navigate(direction)
+        }
 
         viewModel.cartLiveData.observe(viewLifecycleOwner) {
             binding.tvCart.text = it.toString()

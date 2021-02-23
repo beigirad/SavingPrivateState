@@ -6,11 +6,10 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Detail Screen"
+        android:text="Attributes Screen"
         android:textAppearance="?textAppearanceHeadline5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -75,42 +74,4 @@
         android:textAppearance="?textAppearanceSubtitle2"
         tools:text="detail1" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_attributes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Attributes"
-        app:layout_constraintEnd_toEndOf="@id/tv_title"
-        app:layout_constraintStart_toStartOf="@id/tv_title"
-        app:layout_constraintTop_toBottomOf="@id/tv_title" />
-
-    <TextView
-        android:id="@+id/tv_cart"
-        android:layout_width="36dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:gravity="center"
-        android:textAppearance="?textAppearanceSubtitle2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="count" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_inc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:text="+"
-        app:layout_constraintBaseline_toBaselineOf="@id/tv_cart"
-        app:layout_constraintLeft_toRightOf="@id/tv_cart" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_dec"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="16dp"
-        android:text="-"
-        app:layout_constraintBaseline_toBaselineOf="@id/tv_cart"
-        app:layout_constraintRight_toLeftOf="@id/tv_cart" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,6 +23,14 @@
         <argument
             android:name="productId"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_detailFragment_to_attributesFragment"
+            app:destination="@id/attributesFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/attributesFragment"
+        android:name="savingprivatestate.sample.detail.AttributesFragment"
+        android:label="AttributesFragment"
+        tools:layout="@layout/fragment_attributes" />
 
 </navigation>
