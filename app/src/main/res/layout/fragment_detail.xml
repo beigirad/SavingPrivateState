@@ -58,7 +58,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textAppearance="?textAppearanceSubtitle2"
-        tools:text="state1\nkjdfh\basduj\n\nasdijl" />
+        tools:text="state1" />
 
     <TextView
         android:id="@+id/tv_detail_title"

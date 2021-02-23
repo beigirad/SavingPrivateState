@@ -1,6 +1,7 @@
 package savingprivatestate.sample.detail
 
 import android.os.Bundle
+import androidx.core.os.bundleOf
 import androidx.lifecycle.AbstractSavedStateViewModelFactory
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -33,6 +34,12 @@ class DetailViewModel(
     private val productId = requireNotNull(handle.get<Int>("productId")) { "handle must contain 'productId'. handle=$handle" }
 
     init {
+        handle.get<Bundle>("cart")?.getInt("cartCount")?.let {
+            _cartLiveData.value = it
+        }
+        handle.setSavedStateProvider("cart") {
+            bundleOf("cartCount" to _cartLiveData.value)
+        }
         fetchProductDetail()
     }
 
