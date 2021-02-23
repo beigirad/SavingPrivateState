@@ -17,7 +17,7 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.btnOpenDetail.setOnClickListener {
-            val direction = MainFragmentDirections.actionMainFragmentToDetailFragment()
+            val direction = MainFragmentDirections.actionMainFragmentToDetailFragment(productId = 1001)
             findNavController().navigate(direction)
         }
     }

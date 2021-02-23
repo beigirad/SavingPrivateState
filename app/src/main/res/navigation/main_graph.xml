@@ -17,8 +17,12 @@
 
     <fragment
         android:id="@+id/detailFragment"
-        android:name="savingprivatestate.sample.DetailFragment"
+        android:name="savingprivatestate.sample.detail.DetailFragment"
         android:label="DetailFragment"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="productId"
+            app:argType="integer" />
+    </fragment>
 
 </navigation>

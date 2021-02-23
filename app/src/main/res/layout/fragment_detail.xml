@@ -1,17 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:text="Detail Screen"
-        android:textAppearance="?textAppearanceBody1"
+        android:textAppearance="?textAppearanceHeadline5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="tv_args_title,tv_args,tv_state_title,tv_state"
+        app:flow_horizontalAlign="start"
+        app:flow_horizontalGap="8dp"
+        app:flow_horizontalStyle="packed"
+        app:flow_maxElementsWrap="2"
+        app:flow_verticalGap="8dp"
+        app:flow_wrapMode="aligned"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/tv_args_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Args:"
+        android:textAppearance="?textAppearanceSubtitle1" />
+
+    <TextView
+        android:id="@+id/tv_args"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?textAppearanceSubtitle1"
+        tools:text="arg1,arg2" />
+
+    <TextView
+        android:id="@+id/tv_state_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SavedState:"
+        android:textAppearance="?textAppearanceSubtitle1" />
+
+    <TextView
+        android:id="@+id/tv_state"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?textAppearanceSubtitle1"
+        tools:text="state1" />
 </androidx.constraintlayout.widget.ConstraintLayout>
